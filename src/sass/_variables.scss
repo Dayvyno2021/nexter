@@ -1,0 +1,35 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$color-white : white;
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Oxygen', sans-serif;
+
+:root {
+  --font-s16: 1.6rem;
+  --font-s17: 1.7rem;
+  --font-w400: 400;
+  --font-s19: 1.9rem;
+  --font-s15: 1.5rem;
+  --bshadow1: 0 2rem 4rem rgba(0,0,0,0.2);
+  --bshadow2: 0 2rem 4rem rgba(0,0,0,0.3);
+  --bshadow3: 0 2rem 4rem rgba(0,0,0,0.3);
+  --bshadow8: 0 2rem 4rem rgba(0,0,0,0.8);
+  --z-index-1: 1;
+}
+
+//RESPONSIVE BREAKPOINTS
+$bp-1000 : 62.5em; //100px
+$bp-800 : 50em; //800px
+$bp-600 : 37.5em //600px

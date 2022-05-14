@@ -1,0 +1,55 @@
+body {
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //10px
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-1000){
+    font-size: 50%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: 
+  [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] 
+  repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; 
+  // We got 14rem by 1140/8 where 1140 is the total width we gave our project.
+  
+  @media only screen and (max-width: $bp-1000){
+    grid-template-rows:6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: 
+    [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] 
+    minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];   
+  }
+
+  @media only screen and (max-width: $bp-800) {
+    // grid-template-rows:6rem calc(100vh - 6rem) min-content min-content min-content 40vw repeat(3, min-content);
+    grid-template-rows:6rem calc(100vh - 6rem) ; //This works via implicit grid
+  }
+
+}
